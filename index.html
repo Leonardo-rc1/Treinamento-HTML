@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <title>Multipages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            text-align: center; /* Centraliza o texto e as imagens no corpo */
+            margin: 0; /* Remove margens padrão do body */
+            background-image: url('../Multipages - inicio/assets/img/Plano De Fundo De Desenhos Animados.jpeg'); /* Imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+        }
+
+        h1 {
+            font-family: 'Bungee Tint', cursive; /* Fonte atualizada */
+            font-size: 36px; /* Tamanho da fonte */
+            color: #400; /* Cor da fonte */
+            position: relative; /* Para permitir o posicionamento absoluto */
+            z-index: 1; /* Coloca o texto acima do fundo */
+        } 
+
+        img {
+            width: 300px; /* Largura da imagem */
+            height: 350px; /* Altura da imagem */
+            margin: 20px auto; /* Margens automáticas para centralizar e espaço entre os elementos */
+            display: block; /* Faz a imagem ser um bloco */
+            border: 5px solid #fff; /* Borda branca de 5px */
+            border-radius: 80px; /* Bordas arredondadas (opcional) */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra nas imagens */
+        }
+
+        #teste {
+            width: 100%;
+            background-color: rgba(173, 216, 230, 0.8); /* Cor de fundo azul claro com opacidade */
+            padding: 20px 0; /* Adiciona um espaço interno em cima e embaixo */
+            position: relative; /* Para garantir que o texto fique sobre ele */
+            z-index: 0; /* Z-index menor que o do h1 */
+        }
+
+        .btn-custom {
+            margin: 10px; /* Espaço entre os botões */
+            background-color: rgba(0, 100, 200, 0.8); /* Fundo azul divertido */
+            color: #fff; /* Cor do texto do botão em branco */
+            border: none; /* Remove borda padrão */
+            transition: transform 0.3s, background-color 0.3s; /* Animação suave */
+        }
+
+        .btn-custom:hover {
+            transform: scale(1.05); /* Aumenta um pouco o botão */
+            background-color: rgba(0, 150, 250, 0.8); /* Fundo azul mais claro ao passar o mouse */
+        }
+
+        .highlight {
+            font-family: 'Gloria Hallelujah', cursive; /* Fonte das frases */
+            font-weight: bold; /* Negrito */
+            color: #333; /* Cor escura para melhor visualização */
+            display: block; /* Para garantir que ocupa toda a largura */
+            margin: 10px 0; /* Margem superior e inferior */
+        }
+
+        .card {
+            transition: transform 0.3s; /* Animação suave para transformação */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div id="teste">
+        <h1 class="titulo-caveat">Bem-Vindo!</h1>
+    </div>
+
+    <img src="../Multipages - inicio/assets/img/Leonardo.png" alt="Eu">
+
+    <p class="highlight"><i class="fas fa-user"></i> Me conheça melhor:</p>
+    <a href="../Multipages - inicio/public/sobre.html" class="btn btn-custom" onclick="playClickSound()">Saber mais</a>
+
+    <p class="highlight"><i class="fas fa-envelope"></i> Entre em contato comigo:</p>
+    <a href="../Multipages - inicio/public/contato.html" class="btn btn-custom" onclick="playClickSound()">Meus contatos</a>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h5 class="card-title">Curiosidade 1</h5>
+                    <p class="card-text">Adoro viajar e explorar novos lugares!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Curiosidade 2</h5>
+                    <p class="card-text">Se quer saber mais, me contrata que eu te conto.... </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playClickSound() {
+            const audio = new Audio('../path/to/sound.mp3'); // Caminho do seu som
+            audio.play();
+        }
+    </script>
+</body>
+</html>
